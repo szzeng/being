@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\opensource\Diary\app\libs\systembartint-1.0.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06404f77b92ec723cc132e825afe85a07da85ee6">
+        <dex dex="D:\opensource\Diary\app\build\intermediates\pre-dexed\debug\systembartint-1.0.4-4d42d55de13bda3328259ef21d696410538a10df.jar" />
+    </item>
+    <item
+        jar="D:\opensource\Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\opensource\Diary\app\build\intermediates\pre-dexed\debug\classes-7dab53241fc418fa764a85ff8014313846c5bf3a.jar" />
+    </item>
+    <item
+        jar="D:\adt-bundle-windows-x86_64\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\opensource\Diary\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-20bfcd57ca07a41fecd14b33b0f306b0431326bc.jar" />
+    </item>
+    <item
+        jar="D:\opensource\Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\opensource\Diary\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-fd5b914178d89fac6bd7373f1e36fb964babb162.jar" />
+    </item>
+    <item
+        jar="D:\opensource\Diary\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="D:\opensource\Diary\app\build\intermediates\pre-dexed\debug\classes-3e72cf8449f7816edba8b4d56f328b7ed666ba9e.jar" />
+    </item>
+
+</items>

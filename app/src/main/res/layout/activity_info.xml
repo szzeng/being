@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.sz.being.InfoActivity">
+
+    <include layout="@layout/mytoolbar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/activity_info_textView_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/diary_info"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity_info_textView_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_info_textView_appname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/diary_version" />
+
+    <TextView
+        android:id="@+id/activity_info_textView_designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_info_textView_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_designer" />
+
+    <TextView
+        android:id="@+id/activity_info_textView_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="@string/designer_website"
+        android:layout_below="@+id/activity_info_textView_designer"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/activity_info_textView_update_logs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_info_textView_update_logs"
+        android:textColor="@color/update_logs"
+        android:layout_below="@+id/activity_info_textView_weibo"
+        android:layout_alignLeft="@+id/activity_info_textView_weibo"
+        android:layout_alignStart="@+id/activity_info_textView_weibo"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
