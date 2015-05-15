@@ -27,7 +27,7 @@
     	程序-activity的标题
     -->
     <string name="title_activity_list">存在</string>
-    <string name="title_activity_profile">了解自己</string>
+    <string name="title_activity_me">我</string>
     <string name="title_activity_person">重视的人</string>
     <string name="title_activity_insert">新建日记</string>
     <string name="title_activity_detail">日记详情</string>

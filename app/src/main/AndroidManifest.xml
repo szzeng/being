@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sz.being"
     android:versionCode="3"
-    android:versionName="2.1.2" >
+    android:versionName="2.1.2">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -12,7 +13,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppBaseTheme" >
+        android:theme="@style/AppBaseTheme"
+        tools:replace="android:theme" >
         <activity
             android:name="com.sz.being.LockActivity"
             android:label="@string/title_activity_list" >
@@ -47,6 +49,10 @@
         <activity
             android:name="com.sz.being.TrashActivity"
             android:label="@string/title_activity_trash" >
+        </activity>
+        <activity
+            android:name="com.sz.being.MeActivity"
+            android:label="@string/title_activity_me" >
         </activity>
     </application>
 

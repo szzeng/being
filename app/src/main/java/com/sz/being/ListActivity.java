@@ -64,8 +64,8 @@ public class ListActivity extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setHomeButtonEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
 
         /*侧滑菜单的设置*/
         mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_left);
@@ -116,6 +116,8 @@ public class ListActivity extends ActionBarActivity {
                         break;
                     case 5:
                         finish();
+                    case 6:
+                        startActivity(new Intent(ListActivity.this, MeActivity.class));
                         break;
                 }
             }
@@ -132,11 +134,11 @@ public class ListActivity extends ActionBarActivity {
     private List<Map<String, Object>> getData() {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
         String[] strings = new String[]{"新建日记", "垃圾桶", "日记备份",
-                "设置", "关于", "退出"};
+                "设置", "关于", "退出", "我"};
         int[] icons = new int[]{R.drawable.ic_1content_new,
                 R.drawable.ic_1content_discard, R.drawable.ic_1device_sd_storage,
                 R.drawable.ic_1action_settings, R.drawable.ic_1action_about,
-                R.drawable.ic_1navigation_cancel};
+                R.drawable.ic_1navigation_cancel, R.drawable.ic_1action_about,};
         Map<String, Object> map;
         int i;
         for (i = 0; i < strings.length; i++) {
