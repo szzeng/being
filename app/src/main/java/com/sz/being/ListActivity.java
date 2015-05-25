@@ -66,16 +66,35 @@ public class ListActivity extends ActionBarActivity {
         });
 
         /*判断当前android系统是否位于4.4之上，是的话，启动系统沉浸栏*/
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            SystemBarTintManager tintManager = new SystemBarTintManager(this);
-            tintManager.setStatusBarTintEnabled(true);
-            tintManager.setStatusBarTintResource(R.color.colorPrimary);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+//            tintManager.setStatusBarTintEnabled(true);
+//            tintManager.setStatusBarTintResource(R.color.colorPrimary);
+//        }
+
+
+        mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
+
+        toolbar = mViewPager.getToolbar();
+//        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setDisplayShowHomeEnabled(true);
+                actionBar.setDisplayShowTitleEnabled(true);
+                actionBar.setDisplayUseLogoEnabled(false);
+                actionBar.setHomeButtonEnabled(true);
+            }
         }
 
-        /*Toolbar的设置，用来取代Actionbar，并接管Actionbar中的功能*/
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
+//        /*Toolbar的设置，用来取代Actionbar，并接管Actionbar中的功能*/
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
 //        actionBar.setHomeButtonEnabled(true);
 //        actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -129,6 +148,7 @@ public class ListActivity extends ActionBarActivity {
                     case 5:
                         finish();
                     case 6:
+//                        setContentView(R.layout.activity_me);
                         startActivity(new Intent(ListActivity.this, MeActivity.class));
                         break;
                 }
@@ -141,23 +161,6 @@ public class ListActivity extends ActionBarActivity {
         /*将日记列表填充至listView*/
         inflater();
 
-        mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
-
-        toolbar = mViewPager.getToolbar();
-//        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-
-            actionBar = getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setDisplayShowHomeEnabled(true);
-                actionBar.setDisplayShowTitleEnabled(true);
-                actionBar.setDisplayUseLogoEnabled(false);
-                actionBar.setHomeButtonEnabled(true);
-            }
-        }
 
 //        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, 0, 0);
 //        mDrawer.setDrawerListener(mDrawerToggle);
