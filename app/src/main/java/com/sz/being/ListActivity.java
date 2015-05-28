@@ -85,7 +85,7 @@ public class ListActivity extends ActionBarActivity {
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
                 actionBar.setDisplayShowHomeEnabled(true);
-                actionBar.setDisplayShowTitleEnabled(true);
+                actionBar.setDisplayShowTitleEnabled(false);
                 actionBar.setDisplayUseLogoEnabled(false);
                 actionBar.setHomeButtonEnabled(true);
             }
@@ -176,8 +176,8 @@ public class ListActivity extends ActionBarActivity {
                     //    return RecyclerViewFragment.newInstance();
                     case 1:
 //                        return ScrollFragment.newInstance();
-                    //case 2:
-                    //    return WebViewFragment.newInstance();
+                        //case 2:
+                        //    return WebViewFragment.newInstance();
                     default:
                         return RecyclerViewFragment.newInstance();
                 }
@@ -238,15 +238,15 @@ public class ListActivity extends ActionBarActivity {
                 }
                 return "";
             }
-        });
-        mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
-        mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
+     });
+    mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
+    mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
 
-        mViewPager.getViewPager().setCurrentItem(1);
+    mViewPager.getViewPager().setCurrentItem(1);
 
 
 
-    }
+}
 
     /*设置侧滑菜单List，并返回*/
     private List<Map<String, Object>> getData() {
