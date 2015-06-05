@@ -29,6 +29,7 @@ import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.sz.being.R;
 import com.sz.being.dao.DBManager;
+import com.sz.being.fragment.ListViewFragment;
 import com.sz.being.fragment.RecyclerViewFragment;
 
 import java.util.ArrayList;
@@ -175,7 +176,7 @@ public class ListActivity extends ActionBarActivity {
                     //case 0:
                     //    return RecyclerViewFragment.newInstance();
                     case 1:
-//                        return ScrollFragment.newInstance();
+                        return ListViewFragment.newInstance();
                         //case 2:
                         //    return WebViewFragment.newInstance();
                     default:
