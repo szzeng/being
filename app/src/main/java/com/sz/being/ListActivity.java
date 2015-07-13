@@ -176,10 +176,11 @@ public class ListActivity extends ActionBarActivity {
                     //case 0:
                     //    return RecyclerViewFragment.newInstance();
                     case 1:
-                        return ListViewFragment.newInstance();
-                        //case 2:
-                        //    return WebViewFragment.newInstance();
+//                        return ListViewFragment.newInstance();
+                        case 2:
+//                            return WebViewFragment.newInstance();
                     default:
+//                        return ListViewFragment.newInstance();
                         return RecyclerViewFragment.newInstance();
                 }
             }

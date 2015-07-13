@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -21,7 +22,7 @@ import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapte
 //import com.github.florent37.materialviewpager.sample.R;
 import com.sz.being.DetailActivity;
 import com.sz.being.R;
-import com.sz.being.TestRecyclerViewAdapter;
+
 import com.sz.being.dao.DBManager;
 
 import java.util.ArrayList;
@@ -45,10 +46,14 @@ public class ListViewFragment extends Fragment  {
         return inflater.inflate(R.layout.fragment_listview, container, false);
     }
 
+    private static final String[] strs = new String[] {
+            "first", "second", "third", "fourth", "fifth"
+    };
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mListView = (ListView) view.findViewById(R.id.list_view);
+
 
         final Cursor c = mgr.queryTheCursor();
 
@@ -60,6 +65,9 @@ public class ListViewFragment extends Fragment  {
                         R.id.list_item_diary_date, R.id.img_mood, R.id.img_weather});
 
         mListView.setAdapter(mAdapter);
+        mListView.setAdapter(new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, strs));
+
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), DetailActivity.class);

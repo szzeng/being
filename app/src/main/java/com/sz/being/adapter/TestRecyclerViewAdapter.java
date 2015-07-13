@@ -1,4 +1,4 @@
-package com.sz.being;
+package com.sz.being.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
