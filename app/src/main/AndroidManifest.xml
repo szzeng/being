@@ -11,9 +11,18 @@
 
     <application
         android:allowBackup="true"
+        android:name=".AppApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <provider
+            android:authorities="com.sz.being"
+            android:name=".db.DataProvider"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+
         <activity
             android:name="com.sz.being.LockActivity"
             android:label="@string/title_activity_list" >

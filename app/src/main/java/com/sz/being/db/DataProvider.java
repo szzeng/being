@@ -30,7 +30,7 @@ import com.sz.being.AppApplication;
  */
 public class DataProvider extends ContentProvider {
     public static final Object obj = new Object();
-    public static final String AUTHORITY = "com.frankzhu.recyclerviewdemo";
+    public static final String AUTHORITY = "com.sz.being";
     public static final String SCHEME = "content://";
 
     private static final int ALL_ITEMS = 0;//Demo列表
@@ -39,7 +39,7 @@ public class DataProvider extends ContentProvider {
 
     public static final Uri ALL_ITEMS_CONTENT_URI = Uri.parse(SCHEME + AUTHORITY + PATH_ALL_ITEMS);//Demo列表
 
-    public static final String ALL_ITEMS_CONTENT_TYPE = "vnd.android.cursor.dir/vnd.frankzhu.all.items";//Demo列表
+    public static final String ALL_ITEMS_CONTENT_TYPE = "vnd.android.cursor.dir/vnd.sz.all.items";//Demo列表
 
     private static DBHelper mDBHelper;
 

@@ -29,6 +29,7 @@ import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.sz.being.R;
 import com.sz.being.dao.DBManager;
+import com.sz.being.fragment.ItemsFragment;
 import com.sz.being.fragment.ListViewFragment;
 import com.sz.being.fragment.RecyclerViewFragment;
 
@@ -166,6 +167,11 @@ public class ListActivity extends ActionBarActivity {
 //        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, 0, 0);
 //        mDrawer.setDrawerListener(mDrawerToggle);
 
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.dl_left, ItemsFragment.newInstance())
+//                    .commit();
+//        }
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
             int oldPosition = -1;
@@ -181,7 +187,7 @@ public class ListActivity extends ActionBarActivity {
 //                            return WebViewFragment.newInstance();
                     default:
 //                        return ListViewFragment.newInstance();
-                        return RecyclerViewFragment.newInstance();
+                        return ItemsFragment.newInstance();
                 }
             }
 
