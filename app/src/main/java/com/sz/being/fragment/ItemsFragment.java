@@ -37,7 +37,7 @@ import butterknife.InjectView;
  * Why & What is modified:
  */
 public class ItemsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
-    @InjectView(R.id.recycler_view)
+    @InjectView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     private ItemsDataHelper mDataHelper;
     private ItemsAdapter mAdapter;
@@ -64,7 +64,7 @@ public class ItemsFragment extends Fragment implements LoaderManager.LoaderCallb
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_normal, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_recyclerview, container, false);
         ButterKnife.inject(this, rootView);
         return rootView;
     }

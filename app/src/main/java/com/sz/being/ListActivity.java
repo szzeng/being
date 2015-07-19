@@ -131,6 +131,8 @@ public class ListActivity extends ActionBarActivity {
         lvLeftMenu.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mDrawerLayout.closeDrawers();
+
                 switch (position) {
                     case 0:
                         startActivity(new Intent(ListActivity.this, InsertActivity.class));
@@ -236,13 +238,13 @@ public class ListActivity extends ActionBarActivity {
             public CharSequence getPageTitle(int position) {
                 switch (position) {
                     case 0:
-                        return "Selection";
+                        return "基本";
                     case 1:
-                        return "Actualités";
+                        return "精神";
                     case 2:
-                        return "Professionnel";
+                        return "健康";
                     case 3:
-                        return "Divertissement";
+                        return "技能";
                 }
                 return "";
             }
